@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Manifesto Promises</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Progress</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @manifesto_promises.each do |manifesto_promise| %>
+      <tr>
+        <td><%= manifesto_promise.title %></td>
+        <td><%= manifesto_promise.description %></td>
+        <td><%= manifesto_promise.progress %></td>
+        <td><%= link_to 'Show', manifesto_promise %></td>
+        <td><%= link_to 'Edit', edit_manifesto_promise_path(manifesto_promise) %></td>
+        <td><%= link_to 'Destroy', manifesto_promise, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Manifesto promise', new_manifesto_promise_path %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @manifesto_promise.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @manifesto_promise.description %>
+</p>
+
+<p>
+  <strong>Progress:</strong>
+  <%= @manifesto_promise.progress %>
+</p>
+
+<%= link_to 'Edit', edit_manifesto_promise_path(@manifesto_promise) %> |
+<%= link_to 'Back', manifesto_promises_path %>
